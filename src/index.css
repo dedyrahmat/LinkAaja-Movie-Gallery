@@ -5,6 +5,9 @@
 * {
   font-family: "Roboto", sans-serif !important;
 }
+body {
+  background: #f9fafb;
+}
 .material-icons {
   font-family: "Material Icons" !important;
   font-weight: normal;
