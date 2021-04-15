@@ -44,7 +44,13 @@ function MovieDetail() {
   };
 
   if (!isFinished) {
-    return <h1>Loading...</h1>;
+    return (
+      <div className="items-center justify-center flex h-screen">
+        <span className="material-icons animate-spin text-9xl text-center">
+          loop
+        </span>
+      </div>
+    );
   }
   return (
     <div>
@@ -98,7 +104,7 @@ function MovieDetail() {
                   src={
                     cast.profile_path !== null
                       ? `https://image.tmdb.org/t/p/original${cast.profile_path}`
-                      : "https://via.placeholder.com/138x175"
+                      : "https://via.placeholder.com/138x175?text=No+Portait"
                   }
                   style={{ width: 138, height: 175 }}
                 />
