@@ -2,14 +2,18 @@ import loadable from "@loadable/component";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 const Nav = loadable(() => import("./components/Nav"));
 const Index = loadable(() => import("./pages/Index"));
+const MovieDetail = loadable(() => import("./pages/MovieDetail"));
 
 function App() {
-  const routes = [{ path: "/", exact: true, component: () => <Index /> }];
+  const routes = [
+    { path: "/", exact: true, component: () => <Index /> },
+    { path: "/movie/:id", exact: true, component: () => <MovieDetail /> },
+  ];
 
   return (
     <div>
-      <Nav />
       <Router>
+        <Nav />
         <Switch>
           {routes.map((route, index) => (
             <Route

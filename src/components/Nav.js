@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Nav() {
   return (
     <nav className="bg-gray-800">
@@ -5,7 +6,9 @@ function Nav() {
         <div className="relative flex items-center justify-between h-16">
           <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
             <div className="flex-shrink-0 flex items-center">
-              <h1 className="text-white font-black text-xl">The MovieDB</h1>
+              <Link to="/">
+                <h1 className="text-white font-black text-xl">The MovieDB</h1>
+              </Link>
             </div>
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
